@@ -1,0 +1,21 @@
+UI/UX - 9 Juli
+- Jelas
+- Singkat
+- Familiar
+- Responsif
+- Konsisten
+- Menarik
+- Efisien > menggunakan resource yang lebih mampat (uang/tenaga)
+
+Tugas Wireframing
+- Mockup Software
+
+using google web designer
+
+Blackbox test
+- memastikan fungsionalitas software
+- keseuaian input output
+- tidak memperhatikan proses logic internal
+
+Whitebox
+- 

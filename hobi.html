@@ -1,0 +1,154 @@
+<!--
+<html>
+<head>
+    <style>
+        .margin {
+            margin-bottom: 10px;
+        } 
+        .margin-1 {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="margin">
+        <a href="index.html">
+            <button>BIODATA</button>
+        </a>
+        <a href="hobi.html">
+            <button>HOBBY</button>
+        </a>
+    </div>
+    <div class="margin">
+        <h1>HOBBY Tab</h1>
+    </div>
+    <div class="margin-1">
+        <label for="type">Tipe</label>
+        <select>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+        </select>
+    </div>
+    <div class="margin">
+        <form action="">
+            <div class="margin">
+                <input type="checkbox" name="chk1" value="membaca"><label for="chk1"> Membaca</label>
+            </div>
+            <div class="margin">
+                <input type="checkbox" name="chk2" value="musik"><label for="chk2"> Mendengar Musik</label>
+            </div>
+            <div class="margin">
+                <input type="checkbox" name="chk3" value="game"><label for="chk3"> Main Game</label>
+            </div>
+            <div class="margin">
+                <input type="checkbox" name="chk4" value="jalan"><label for="chk4"> Jalan - Jalan</label>
+            </div>
+            <div class="margin">
+                <button type="submit" value="submit">Submit</button>
+            </div>
+        </form>
+    </div>    
+</body>    
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ini</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dropdown.css">
+    <style>
+        .margin {
+            margin-bottom: 10px;
+        }
+        .chkbks {
+            width: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdowns">
+    <a href="javascript:void(0)" class="dropsbtn">Menu</a>
+    <div class="dropdowns-content">
+      <a href="index.html">Biodata</a>
+      <a href="hobi.html">Hobby</a>
+    </div>
+  </li>
+</ul>
+<div class="jumbotron text-center">
+  <h1>Original</h1>
+  <p>I'm going to always rise above the doubt that may exist about me</p> 
+</div>
+	<!--End of Jumbtron-->
+
+	<!--Container start-->
+<div class="container">
+	
+
+	<div class="main">
+
+		<div class="middle">
+			<div class="margin">
+                <a href="index.html">
+                    <button class="btn btn-info">BIODATA</button>
+                </a>
+                <a href="hobi.html">
+                    <button class="btn btn-danger">HOBBY</button>
+                </a>
+            </div>
+            <div class="margin">
+                <h1>HOBBY</h1>
+            </div>
+            <hr>
+            <div class="margin-1">
+                <label for="type">Tipe</label>
+                <select>
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+            </div>
+            <hr>
+            <div class="margin">
+                <form action="">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td class="chkbks"><input type="checkbox" name="chk1" value="membaca"></td>
+                            <td><label for="chk1"> Membaca</label></td>
+                        </tr>
+                        <tr>
+                            <td class="chkbks"><input type="checkbox" name="chk2" value="musik"></td>
+                            <td><label for="chk2"> Mendengar Musik</label></td>
+                        </tr>
+                        <tr>
+                            <td class="chkbks"><input type="checkbox" name="chk3" value="game"></td>
+                            <td><label for="chk3"> Main Game</label></td>
+                        </tr>
+                        <tr>
+                            <td class="chkbks"><input type="checkbox" name="chk4" value="jalan"></td>
+                            <td><label for="chk4"> Jalan - Jalan</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit" value="submit">Submit</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+		</div> <!--/ .middle -->
+	</div> 
+</div>
+    
+<div class="footer">
+    <p class="tulis"><a>Copyright &copy; 0000</a></p>
+</div> 
+	<!--end of footer-->
+</body>
+
+</html>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
