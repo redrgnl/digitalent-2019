@@ -14,7 +14,7 @@ $data = mysqli_query($mysqli, $query);
   <script src="../../assets/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container" style="margin-top:30px">
+<div class="container" style="margin-top:30px; margin-left: 0px; margin-right: 0px;">
   <div class="row">
     <div class="col-md-12">
       <table class="table table-striped table-hover">

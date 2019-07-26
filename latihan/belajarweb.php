@@ -16,7 +16,6 @@
         $warn_email = "";
         $warn_alamat = "";
         $warn_telepon = "";
-         
         ?>
         <form action="" method="post">
             <div style="margin-bottom: 10px">
