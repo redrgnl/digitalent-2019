@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 
+//query select data from database
 $query = "SELECT data_siswa.id_siswa, data_siswa.nama, data_siswa.alamat, data_siswa.jenis_kelamin, data_siswa.sekolah_asal, agama.agama
           FROM data_siswa JOIN agama
           ON data_siswa.id_agama = agama.id_agama 
@@ -8,6 +9,7 @@ $query = "SELECT data_siswa.id_siswa, data_siswa.nama, data_siswa.alamat, data_s
 
 $siswa = mysqli_query($mysqli, $query);
 
+//count total record from data_siswa
 $jumlah = mysqli_query($mysqli, "SELECT count(*) as jumlah FROM data_siswa");
 $jumlahsiswa = mysqli_fetch_assoc($jumlah);
 
@@ -58,7 +60,7 @@ $jumlahsiswa = mysqli_fetch_assoc($jumlah);
   <p>Kementerian Riset, Teknologi, dan Pendidikan Tinggi Republik Indonesia</p> 
 </div>
 
-<div style="margin-left: 0px; margin-right: 0px">
+<div style="margin-left: 0px; margin-right: 30px">
   <div class="row">
     <div class="col-md-2" style="background-color: #aaa; padding: 0px;">
       <div class="sidebar-layout">
@@ -66,15 +68,18 @@ $jumlahsiswa = mysqli_fetch_assoc($jumlah);
         </div>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class=""></i>Form Pendaftaran</a>
+            <a class="nav-link" href="project-index.php">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Daftar Mahasiswa</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project-form.html"><i class=""></i>Form Pendaftaran</a>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="col-md-10" style="margin-top:30px; margin-bottom:30px;">
+    <div class="col-md-10" style="margin-top:30px; margin-bottom:30px">
       <h2>Politeknik Negeri Jember | Mahasiswa Baru</h2>
       <p>Daftar Mahasiswa Politeknik Negeri Jember</p>
       <div class="card">
@@ -107,8 +112,12 @@ $jumlahsiswa = mysqli_fetch_assoc($jumlah);
                       <td>".$row['agama']."</td>
                       <td>".$row['sekolah_asal']."</td>
                       <td>
-                        <button type='button' class='btn btn-success'><i class='fa fa-gear'></i></button>
-                        <button type='button' class='btn btn-danger'><i class='fa fa-trash'></i></button>
+                        <a href='project-edit.php?id=".$row['id_siswa']."'>
+                          <button type='button' class='btn btn-success'><i class='fa fa-gear'></i></button>
+                        </a>
+                        <a href='delete-mahasiswa.php?id=".$row['id_siswa']."'>
+                          <button type='button' class='btn btn-danger'><i class='fa fa-trash'></i></button>
+                        </a>
                       </td>
                     </tr>
                   ";
@@ -118,6 +127,8 @@ $jumlahsiswa = mysqli_fetch_assoc($jumlah);
           </table>
           <hr>
           <h5>Jumlah Siswa <?php echo $jumlahsiswa['jumlah']?></h5>
+          <hr>
+           <a href="project-form.html"><button type="button" class="btn btn-primary">Tambah Mahasiswa Baru</button></a>
         </div>
       </div>
     </div>
